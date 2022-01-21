@@ -12,21 +12,20 @@ public class caesarCipher {
 
         for (int i = 0; i < n; i++) {
             String s = scan.next();
-            int n2 = scan.nextInt();
-            String news = "";
+            int shift = scan.nextInt();
+            StringBuilder news = new StringBuilder() ;
             int[] chars = s.chars().toArray();
-            ArrayList<String> arr  = new ArrayList<>();
+
             for (int c: chars
                  ) {
-//                System.out.println(c);
-                arr.add((String.copyValueOf(Character.toChars(c-(n2%25)))));
-            }
-            for (String a: arr
-                 ) {
-                System.out.print(a);
+                c= c-shift;
+                if (c <65 ){
+                    c += 26;
+                }
+                news.append((String.copyValueOf(Character.toChars(c))));
 
             }
-            System.out.println();
+            System.out.println(news);
 
         }
     }
