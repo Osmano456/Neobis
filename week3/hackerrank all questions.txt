@@ -1,0 +1,23 @@
+select * from City
+
+select * from city where id = 1661
+
+select * from city where countrycode ='JPN'
+
+select name from city where countrycode = 'JPN'
+
+select city, state  from station
+
+select distinct city from station where id % 2 = 0
+
+select top 1 city, len(city) from station ORDER BY LEN(city) ASC, city ASC;
+select top 1 city, len(city) from station ORDER BY LEN(city) DESC, city ASC;
+
+
+select distinct city from station where city RLIKE '[aeiouAEIOU]$'
+
+select name from employee order by name asc
+
+select name from students where marks> 75 
+ORDER BY RIGHT(name, 3),id ASC;
+
