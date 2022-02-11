@@ -1,0 +1,25 @@
+All methods are tested in the main function like this:
+
+public static void main(String[] args){
+        
+        insert(1, "Chocolate",20,"no");
+        insert(2, "Strawberry",30,"yes");
+        insert(3, "Vanilla",35,"yes");
+        delete(3);
+        update(1,"Banana",30,"no");
+        select();
+    }
+
+
+
+Output:
+
+Inserted cake with parameters: 1 Chocolate 20 no
+Inserted cake with parameters: 2 Strawberry 30 yes
+Inserted cake with parameters: 3 Vanilla 35 yes
+Deleted Cake with id 3
+Updated Cake with id 1
+1  Banana  30  no
+2  Strawberry  30  yes
+
+Process finished with exit code 0
