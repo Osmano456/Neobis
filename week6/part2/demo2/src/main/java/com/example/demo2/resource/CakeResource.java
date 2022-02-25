@@ -34,9 +34,9 @@ public class CakeResource {
     }
 
     @PostMapping(value = "/add")
-    public List<Cake> add(@RequestBody final Cake cake){
+    public Optional<Cake> add(@RequestBody final Cake cake){
         cakeRepository.save(cake);
-        return cakeRepository.findAll();
+        return cakeRepository.findById(cake.getId());
     }
 
     @PutMapping(value = "/{id}")
