@@ -1,0 +1,44 @@
+Cake Table 
+
+Endpoint 1
+
+1. Gets all records
+2. GET http://localhost:8080/rest/cake/all
+3. -
+4. [{"id":1,"type":"Chocolate","price":10,"icing":"yes"},{"id":2,"type":"Banana","price":30,"icing":"no"}]
+
+
+
+Endpoint 2
+
+1. Gets record with the id provided
+2. GET http://localhost:8080/rest/cake/2 
+3. -
+4. {"id":2,"type":"Banana","price":30,"icing":"no"}
+
+
+
+Endpoint 3
+
+1. Deletes record with the id provided
+2. DELETE http://localhost:8080/rest/cake/delete/2 
+3. -
+4. -
+
+
+
+Endpoint 4
+
+1. Adds record with the provided data 
+2. POST http://localhost:8080/rest/cake/add 
+3. {"type":"Strawberry","price":45,"icing":"no"}
+4. {"id":12,"type":"Strawberry","price":45,"icing":"no"}
+
+
+
+Endpoint 5
+
+1. Changes record with the provided id
+2. PUT http://localhost:8080/rest/cake/2
+3. {"type":"Banana","price":30,"icing":"no"}
+4. {"id":2,"type":"Banana","price":30,"icing":"no"}
