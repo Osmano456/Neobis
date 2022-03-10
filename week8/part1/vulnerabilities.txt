@@ -1,0 +1,2 @@
+1- There is no authorization currently so everyone who is signed in can access everything. This can be fixed by adding roles and users.
+2- No encryption in passwords. 
