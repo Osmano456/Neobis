@@ -1,0 +1,1 @@
+INSERT INTO cake VALUES (20,'testcake',34,'yes',500);
