@@ -1,0 +1,1 @@
+ALTER TABLE cake ADD weight int;

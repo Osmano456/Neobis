@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+      db:
+        image: mysql:latest
+        container_name: db
+        restart: always
+        environment:
+          MYSQL_DATABASE: cafe
+          MYSQL_ROOT_PASSWORD: Osman456
+        ports:
+          - "3307:3306"
+        volumes:
+          - C:\Users\osman\Documents\dbdd:/var/lib/mysql
+          - ./cafewdata.sql:/docker-entrypoint-initdb.d/cafewdata.sql
+      spring_app:
+          build: .
+          ports:
+            - "8080:8080"
+          depends_on:
+            - db
+
+          restart: always
+
+
+volumes:
+  mydb:
